@@ -1,9 +1,12 @@
+import { accessSync } from "fs";
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
   production: false
+  accessToken: "?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c";
 };
 
 /*

@@ -7,8 +7,8 @@ import { Http, Response} from '@angular/http';
   styleUrls: ['./github-search.component.css']
 })
 export class GithubSearchComponent implements OnInit {
-  link = 'https://api.github.com/users/';
-  // link = 'https://api.github.com/search/repositories?q=';
+  // link = 'https://api.github.com/repositories?q=';
+  link= "http://api.github.com/users/"
   accessToken= '?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c';
   user=[];
   constructor(private http: Http) { }
