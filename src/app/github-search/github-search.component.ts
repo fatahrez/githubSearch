@@ -8,14 +8,15 @@ import { Http, Response} from '@angular/http';
 })
 export class GithubSearchComponent implements OnInit {
   link = 'https://api.github.com/users/';
+  // link = 'https://api.github.com/search/repositories?q=';
   accessToken= '?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c';
-  users=[];
+  user=[];
   constructor(private http: Http) { }
   performSearch(search: HTMLInputElement): void{
     let fullLink = this.link + search.value +this.accessToken;
     this.http.get(fullLink).subscribe((res:Response)=>{
-      this.users= res.json();
-      console.log(this.users);
+      this.user= res.json();
+      console.log(this.user);
     })
   }
   ngOnInit() {

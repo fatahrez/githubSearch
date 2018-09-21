@@ -1,2 +1,37 @@
-<input type="text" name="search" #search>
-<button (click)="performSearch(search)">Button</button> 
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+    <input type="text" name="search" #search>
+    <button (click)="performSearch(search)">search</button> 
+      <h2>Public Profile</h2>
+      <hr>
+    <div>
+      <label for="name"><strong>Name</strong></label><br>
+      <input #name value="{{user.name}}">
+    </div>
+    <div>
+      <label for="email"><strong>Public Email</strong></label><br>
+      <input #email value="{{user.email}}">
+    </div>
+    <div>
+      <label for="bio"><strong>Bio</strong></label><br>
+      <input #email value="{{user.bio}}">
+    </div>
+    <div>
+      <label for="url"><strong>URL</strong></label><br>
+      <input #url value="{{user.blog}}">
+    </div>
+    <div>
+      <label for="company"><strong>Company</strong></label><br>
+      <input #company value="{{user.company}}">
+    </div>
+    <div>
+        <label for="location"><strong>Location</strong></label><br>
+        <input #location value="{{user.location}}">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <img src="{{user.avatar_url}}" alt="">
+  </div>
+</div>
+    <!-- <p *ngFor="let use of user">{{use.full_name}}</p> -->
