@@ -5,8 +5,8 @@ import { accessSync } from "fs";
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-  accessToken: "?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c";
+  production: false,
+  accessToken: "?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c"
 };
 
 /*
