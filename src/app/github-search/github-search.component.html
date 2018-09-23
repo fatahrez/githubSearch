@@ -1,9 +1,14 @@
-<div class="row">
-  <div class="col-md-2"></div>
+<input type="text" name="search" #search>
+<button (click)="performSearch(search)">search</button>
+  <div class="row">
+  <div class="col-md-2">
+    <p>{{searchArray.owner}}</p>
+  </div>
   <div class="col-md-6">
-    <input type="text" name="search" #search>
-    <button (click)="performSearch(search)">search</button> 
-      <h2>Public Profile</h2>
+    <div *ngFor="let search of searchArray">
+      <a href="{{html_url}}">{{full_name}}</a>
+    </div>
+   <!-- <h2>Public Profile</h2>
       <hr>
     <div>
       <label for="name"><strong>Name</strong></label><br>
@@ -32,6 +37,8 @@
   </div>
   <div class="col-md-4">
     <img src="{{searchArray.avatar_url}}" alt="">
-  </div>
+  </div> -->
 </div>
-   <!-- <p *ngFor="let use of user">{{use.full_name}}</p> --> 
+   <!-- <ul>
+    <a href="{{searchArray.repos_url}}"><li>repos</li></a>
+   </ul>   -->
