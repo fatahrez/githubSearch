@@ -19,14 +19,20 @@ export class GithubSearchComponent implements OnInit {
   location;
   // link = 'https://api.github.com/repositories?q=';
   link= "http://api.github.com/users/"
-  accessToken= "/repos"+environment.accessToken;
+  accessToken= environment.accessToken;
   searchArray=[];
   constructor(private searchRequestService: SearchRequestService, private http: Http) {
     this.searchRequestService = searchRequestService;
     
    }
+  userArray=[];
   performSearch(search: HTMLInputElement): void{
-    let fullLink = this.link + search.value + this.accessToken;
+    let userLink = this.link + search.value + this.accessToken;
+    this.http.get(userLink).subscribe((res:Response)=>{
+      this.userArray= res.json();
+      console.log(this.userArray);
+    })
+    let fullLink = this.link + search.value +"/repos" +this.accessToken;
     this.http.get(fullLink).subscribe((res:Response)=>{
       this.searchArray= res.json();
       console.log(this.searchArray);
