@@ -8,8 +8,7 @@ import { Http, Response} from '@angular/http';
 })
 export class UserRepoComponent implements OnInit {
 
-  constructor(private http:Http) { }
-
+  constructor(private http:Http) { }S
   ngOnInit() {
   }
 
