@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http, Response} from '@angular/http';
+// import { Http, Response} from '@angular/http';
 import { Search } from '../search'
 import {HttpClient } from '@angular/common/http'
+import { environment} from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +10,13 @@ import {HttpClient } from '@angular/common/http'
 export class SearchRequestService {
     search: Search;
     // link = 'https://api.github.com/repositories?q=';
-    link= "http://api.github.com/users/"
-    accessToken= '?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c';
+    link= "http://api.github.com/users/";
+    accessToken= environment.accessToken;
     user=[];
     constructor(private http: HttpClient) { 
       this.search = new Search('','','','','','')
     }
-    performSearch(search: HTMLInputElement){
+    performSearch(){
       interface ApiResponse{
         name: any;
         email: any;
@@ -24,8 +25,8 @@ export class SearchRequestService {
         company: any;
         location: any;
       }
-      let fullLink = this.link + search.value +this.accessToken;
-      const promise = new Promise((resolve)=>{
+      let fullLink = this.link + "fatahrez" +this.accessToken;
+      const promise = new Promise((resolve, reject)=>{
         this.http.get<ApiResponse>(fullLink).toPromise().then(response =>{
           this.search.name = response.name;
           this.search.email= response.email;
@@ -33,7 +34,7 @@ export class SearchRequestService {
           this.search.url = response.url;
           this.search.company = response.company;
           this.search.location = response.location;
-          console.log(this.user);
+          console.log(this.search);
           resolve();
         }),
         error=>{
@@ -43,9 +44,12 @@ export class SearchRequestService {
           this.search.url = "";
           this.search.company = "";
           this.search.location = "";
+          reject(error)
         }
+
   }
       )
-  return promise;
+      return promise;
 }
+
 }
