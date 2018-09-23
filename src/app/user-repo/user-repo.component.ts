@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response} from '@angular/http';
 
 @Component({
   selector: 'app-user-repo',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserRepoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:Http) { }
 
   ngOnInit() {
   }
