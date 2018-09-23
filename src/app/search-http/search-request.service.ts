@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // import { Http, Response} from '@angular/http';
-import { Search } from '../search'
+import { Search} from '../search'
 import {HttpClient } from '@angular/common/http'
 import { environment} from '../../environments/environment'
 
@@ -8,7 +8,7 @@ import { environment} from '../../environments/environment'
   providedIn: 'root'
 })
 export class SearchRequestService {
-    search: Search;
+    search:Search;
     // link = 'https://api.github.com/repositories?q=';
     link= "http://api.github.com/users/";
     accessToken= environment.accessToken;

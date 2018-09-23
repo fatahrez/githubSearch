@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response} from '@angular/http';
 import { SearchRequestService } from '../search-http/search-request.service'
 import { Search } from '../search';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-github-search',
@@ -18,7 +19,7 @@ export class GithubSearchComponent implements OnInit {
   location;
   // link = 'https://api.github.com/repositories?q=';
   link= "http://api.github.com/users/"
-  accessToken= '?access_token=136fefe167f49c63fdd64405284a6c76df3f5f8c';
+  accessToken= environment.accessToken;
   searchArray=[];
   constructor(private searchRequestService: SearchRequestService, private http: Http) {
     this.searchRequestService = searchRequestService;
@@ -31,19 +32,9 @@ export class GithubSearchComponent implements OnInit {
       console.log(this.searchArray);
     })
   }
-  // searchArray: [];
   ngOnInit() {
-
     this.searchRequestService.performSearch();
     this.search= this.searchRequestService.search;
-    this.name = this.searchRequestService.search.name;
-    this.bio = this.searchRequestService.search.bio;
-    this.blog = this.searchRequestService.search.url;
-    this.email = this.searchRequestService.search.email;
-    this.company = this.searchRequestService.search.company;
-    this.location = this.searchRequestService.search.company;
-    
-    console.log(this.search);
     
   }
 

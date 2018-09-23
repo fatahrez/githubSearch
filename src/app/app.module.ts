@@ -6,13 +6,17 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
-import { SearchRequestService } from './search-http/search-request.service'
+import { SearchRequestService } from './search-http/search-request.service';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { UserRepoComponent } from './user-repo/user-repo.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
-    GithubSearchComponent
+    GithubSearchComponent,
+    RepositoriesComponent,
+    UserRepoComponent
   ],
   imports: [
     BrowserModule,
