@@ -25,7 +25,10 @@
     <div class="col-md-6">
       <mat-card *ngFor="let search of searchArray">
         <mat-card-title><a href="{{search.html_url}}" [appHighlight]='color'>{{search.full_name}}</a></mat-card-title>
-        <mat-card-content><p>{{search.description}}</p></mat-card-content>
+        <mat-card-content>
+          <p>{{search.description}}</p>
+          <p>{{search.created_at|date}}</p>
+        </mat-card-content>
       </mat-card>
       <br>
   </div>
