@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import {RoutingModule} from './routing/routing.module'
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -13,16 +14,19 @@ import { SearchRequestService } from './search-http/search-request.service';
 import { MaterialModule } from './material';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
-const routes:Routes=[
-  {path:"search",component:GithubSearchComponent},
-  {path:"landingPage",component:LandingPageComponent}
-]
+// const routes:Routes=[
+//   {path:"landingPage",component:LandingPageComponent},
+//   {path:"search",component:GithubSearchComponent},
+//   {path:"",redirectTo:"/landingPage",pathMatch:"full"}
+  
+// ]
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
     GithubSearchComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    RoutingModule
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ export class LandingPageComponent implements OnInit {
   searchArray=[]; 
   constructor(private http:Http) { }
   userArray=[];
-  performSearch(search: HTMLInputElement): void{
+  performSearch(): void{
     let userLink = this.link + "fatahrez" + this.accessToken;
     this.http.get(userLink).subscribe((res:Response)=>{
       this.userArray= res.json();
