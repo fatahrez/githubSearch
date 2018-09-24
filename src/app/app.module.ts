@@ -9,7 +9,7 @@ import {RoutingModule} from './routing/routing.module'
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
-import { SearchRequestService } from './search-http/search-request.service';
+// import { SearchRequestService } from './search-http/search-request.service';
 import { MaterialModule } from './material';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HighlightDirective } from './highlight.directive';
@@ -34,7 +34,8 @@ import { DatePipe } from './date.pipe';
     FormsModule,
     RoutingModule
   ],
-  providers: [SearchRequestService],
+  providers:[],
+  // providers: [SearchRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,9 +10,9 @@ import { Http, Response} from '@angular/http'
 export class LandingPageComponent implements OnInit {
   link= "http://api.github.com/users/"
   accessToken= environment.accessToken;
-  searchArray=[]; 
+  searchArray:any; 
   constructor(private http:Http) { }
-  userArray=[];
+  userArray:any;
   performSearch(): void{
     let userLink = this.link + "fatahrez" + this.accessToken;
     this.http.get(userLink).subscribe((res:Response)=>{
