@@ -19,7 +19,7 @@ export class LandingPageComponent implements OnInit {
       this.userArray= res.json();
       console.log(this.userArray);
     })
-    let fullLink = this.link + search.value +"/repos" +this.accessToken;
+    let fullLink = this.link + "fatahrez" +"/repos" +this.accessToken;
     this.http.get(fullLink).subscribe((res:Response)=>{
       this.searchArray= res.json();
       console.log(this.searchArray);
@@ -28,5 +28,4 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
