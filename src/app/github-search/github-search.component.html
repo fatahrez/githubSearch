@@ -1,5 +1,10 @@
-<input type="text" name="search" #search><br>
-<button (click)="performSearch(search)">search</button>
+<form class="search-form">
+  <mat-form-field class="search-fullWidth">
+    <textarea matInput placeholder="Search a user" name="search" #search></textarea>
+  </mat-form-field>
+  <button (click)="performSearch(search)" >search</button>
+</form>
+
   
 <div class="row">
   <div class="col-md-4">
@@ -8,6 +13,7 @@
     <p>{{userArray.login}}</p>
     <br>
     <p>{{userArray.bio}}</p>
+    <!-- <button class="button button-primary">Edit Bio</button> -->
     <hr>
     <p>{{userArray.company}}</p>
     <p>{{userArray.location}}</p>

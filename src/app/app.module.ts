@@ -3,29 +3,29 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
 import { SearchRequestService } from './search-http/search-request.service';
-import { RepositoriesComponent } from './repositories/repositories.component';
-import { UserRepoComponent } from './user-repo/user-repo.component'
 import { MaterialModule } from './material';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
     GithubSearchComponent,
-    RepositoriesComponent,
-    UserRepoComponent
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [SearchRequestService],
   bootstrap: [AppComponent]
