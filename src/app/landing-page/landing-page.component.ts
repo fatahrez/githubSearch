@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment'
 export class LandingPageComponent implements OnInit {
   link= "http://api.github.com/users/"
   accessToken= environment.accessToken;
-  searchArray=[];
+  searchArray=[]; 
   constructor() { }
 
   ngOnInit() {
