@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
   link= "http://api.github.com/users/"
   accessToken= environment.accessToken;
   searchArray=[]; 
-  constructor() { }
+  constructor(private http:Http) { }
   userArray=[];
   performSearch(search: HTMLInputElement): void{
     let userLink = this.link + search.value + this.accessToken;
