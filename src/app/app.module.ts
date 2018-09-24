@@ -13,6 +13,7 @@ import { SearchRequestService } from './search-http/search-request.service';
 import { MaterialModule } from './material';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HighlightDirective } from './highlight.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HighlightDirective } from './highlight.directive';
     GithubSearchComponent,
     LandingPageComponent,
     HighlightDirective,
+    DatePipe,
 
   ],
   imports: [
