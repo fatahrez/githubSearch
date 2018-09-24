@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response} from '@angular/http';
-// import { SearchRequestService } from '../search-http/search-request.service'
-// import { Search } from './search';
+import { SearchRequestService } from '../search-http/search-request.service'
+import { Search } from './search';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -10,13 +10,13 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./github-search.component.css']
 })
 export class GithubSearchComponent implements OnInit {
-  // search: Search;
-  // name;
-  // bio;
-  // blog;
-  // email;
-  // company;
-  // location;
+  search: Search;
+  name;
+  bio;
+  blog;
+  email;
+  company;
+  location;
   // link = 'https://api.github.com/repositories?q=';
   link= "http://api.github.com/users/"
   accessToken= environment.accessToken;
