@@ -12,6 +12,7 @@ import { GithubSearchComponent } from './github-search/github-search.component';
 import { SearchRequestService } from './search-http/search-request.service';
 import { MaterialModule } from './material';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     GithubComponent,
     GithubSearchComponent,
     LandingPageComponent,
+    HighlightDirective,
 
   ],
   imports: [
